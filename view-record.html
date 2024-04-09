@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Records - ClinicConnect</title>
+    <link rel="stylesheet" href="view-record.css">
+
+</head>
+
+<body>
+    <div class="sidenav">
+        <p>User</p>
+    </div>
+    <header>
+        <h1>ClinicConnect</h1>
+        <nav class="menu-bar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#service">Service</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="right">
+            <button class="signup-btn">Sign Out</button>
+        </div>
+    </header>
+    <section>
+        <h2>View Records</h2>
+        <div class="searchBar">
+            <input type="text" id="searchInput" placeholder="Search by name or ID">
+            <button onclick="searchRecords()">Search</button>
+        </div>
+
+            <div id="editForm" class="edit-form">
+                <h2>Edit Records</h2>
+                <label for="editName">Patient Name:</label>
+                <input type="text" id="editName" name="editName">
+
+                <label for="editGender">Gender:</label>
+                <input type="text" id="editGender" name="editGender">
+
+                <label for="editEmail">Email:</label>
+                <input type="text" id="editEmail" name="editEmail">
+
+                <label for="editContact">Contact No.:</label>
+                <input type="text" id="editContact" name="editContact">
+
+                <label for="editDiagnosis">Diagnosis:</label>
+                <input type="text" id="editDiagnosis" name="editDiagnosis">
+
+                <label for="editTreatment">Treatment:</label>
+                <input type="text" id="editTreatment" name="editTreatment">
+
+                <label for="editPrescriptions">Prescriptions:</label>
+                <input type="text" id="editPrescriptions" name="editPrescriptions">
+
+                <button onclick="saveEdit()">Save</button>
+            </div>
+        </div>
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>Patient #</th>
+                    <th>Student ID</th>
+                    <th>Patient Name</th>
+                    <th>Gender</th>
+                    <th>Email</th>
+                    <th>Contact No.</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>123456</td>
+                    <td>John Doe</td>
+                    <td>Male</td>
+                    <td>John.doe@gmail.com</td>
+                    <td>09161515</td>
+                    <td>
+                        <button class="view-details-btn" onclick="viewDetails(1)">Full Details</button>
+                        <button class="edit-records-btn" onclick="openEditForm(1)">Edit</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>223456</td>
+                    <td>Ronald duck</td>
+                    <td>Male</td>
+                    <td>Ronald13@gmail.com</td>
+                    <td>09156588</td>
+                    <td>
+                        <button class="view-details-btn" onclick="viewDetails(2)">Full Details</button>
+                        <button class="edit-records-btn" onclick="openEditForm(2)">Edit</button>      
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>323456</td>
+                    <td>Jane Smith</td>
+                    <td>Female</td>
+                    <td>jane.smith@gmail.com</td>
+                    <td>09161234</td>
+                    <td>
+                        <button class="view-details-btn" onclick="viewDetails(3)">Full Details</button>
+                        <button class="edit-records-btn" onclick="openEditForm(3)">Edit</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="detailsModal" class="modal">
+            <div class="modal-content" id="modalContent"></div>
+
+    </section>
+
+    <script> 
+        function viewDetails(patientId) {
+        var modal = document.getElementById("detailsModal");
+        var modalContent = document.getElementById("modalContent");
+
+        var patientDetails = {
+            patientId: patientId,
+            studentId: "123456",
+            patientName: "John Doe",
+            gender: "Male",
+            email: "John.doe@gmail.com",
+            contactNo: "09161515",
+            diagnosis: "Sample Diagnosis",
+            treatment: "Sample Treatment",
+            prescriptions: ["Medicine A", "Medicine B"]
+            
+        };
+        var detailsHTML = "<h2>Patient Details</h2>";
+        detailsHTML += "<p>Patient ID: " + patientDetails.patientId + "</p>";
+        detailsHTML += "<p>Student ID: " + patientDetails.studentId + "</p>";
+        detailsHTML += "<p>Patient Name: " + patientDetails.patientName + "</p>";
+        detailsHTML += "<p>Gender: " + patientDetails.gender + "</p>";
+        detailsHTML += "<p>Email: " + patientDetails.email + "</p>";
+        detailsHTML += "<p>Contact No.: " + patientDetails.contactNo + "</p>";
+        detailsHTML += "<p>Diagnosis: " + patientDetails.diagnosis + "</p>";
+        detailsHTML += "<p>Treatment: " + patientDetails.treatment + "</p>";
+        detailsHTML += "<p>Prescriptions: " + patientDetails.prescriptions.join(", ") + "</p>";
+
+        modalContent.innerHTML = detailsHTML;
+        modal.style.display = "block";
+    }
+    function openEditForm(patientId) {
+        var editForm = document.getElementById("editForm");
+
+        var patientDetails = {
+            patientId: patientId,
+            patientName: "John Doe",
+            gender: "Male",
+            email: "John.doe@gmail.com",
+            contactNo: "09161515",
+            diagnosis: "Sample Diagnosis",
+            treatment: "Sample Treatment",
+            prescriptions: ["Medicine A", "Medicine B"]
+        };
+
+        document.getElementById("editName").value = patientDetails.patientName;
+        document.getElementById("editGender").value = patientDetails.gender;
+        document.getElementById("editEmail").value = patientDetails.email;
+        document.getElementById("editContact").value = patientDetails.contactNo;
+        document.getElementById("editDiagnosis").value = patientDetails.diagnosis;
+        document.getElementById("editTreatment").value = patientDetails.treatment;
+        document.getElementById("editPrescriptions").value = patientDetails.prescriptions.join(", ");
+
+        editForm.style.display = "block";
+    }
+
+    function saveEdit() {
+        alert('Records saved successfully!');
+        closeEditForm();
+    }
+
+    function closeEditForm() {
+        var editForm = document.getElementById("editForm");
+        editForm.style.display = "none";
+    }
+
+    window.onclick = function (event) {
+        var modal = document.getElementById("detailsModal");
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+        function searchRecords() {
+            var input, filter, table, tr, td1, td2, i, txtValue1, txtValue2;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            table = document.querySelector("table");
+            tr = table.getElementsByTagName("tr");
+
+            for (i = 0; i < tr.length; i++) {
+                td1 = tr[i].getElementsByTagName("td")[1]; 
+                td2 = tr[i].getElementsByTagName("td")[2];
+                if (td1 && td2) {
+                    txtValue1 = td1.textContent || td1.innerText;
+                    txtValue2 = td2.textContent || td2.innerText;
+                    if (txtValue1.toUpperCase().indexOf(filter) > -1 || txtValue2.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

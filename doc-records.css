@@ -1,0 +1,119 @@
+// Define autoloader:
+autoload();
+
+function autoload() {
+    spl_autoload_register(function ($class) {
+        $classPath = str_replace('\\', DIRECTORY_SEPARATOR, $class);
+        require_once __DIR__ . DIRECTORY_SEPARATOR . $classPath . '.php';
+    });
+}
+
+// School class:
+namespace USJR\School;
+
+class School {
+    private string $name;
+    private array $classes;
+
+    public function __construct(string $name) {
+        $this->name = $name;
+        $this->classes = [];
+    }
+
+    public function addClass(ClassSchedule $class) {
+        $this->classes[] = $class;
+    }
+
+    public function displayInformation(): string {
+        $output = "{$this->name}\n";
+        foreach ($this->classes as $class) {
+            $output .= $class->displayInformation() . "\n";
+        }
+        return $output;
+    }
+}
+
+// ClassSchedule class:
+namespace USJR\School\ClassSchedules;
+
+class ClassSchedule {
+    private string $identifier;
+    private string $startTime;
+    private string $endTime;
+    private StudentCollection $students;
+    private TeacherCollection $teachers;
+
+    public function __construct(string $identifier, string $startTime, string $endTime) {
+        $this->identifier = $identifier;
+        $this->startTime = $startTime;
+        $this->endTime = $endTime;
+        $this->students = new StudentCollection();
+        $this->teachers = new TeacherCollection();
+    }
+
+    public function addStudent(Student $student) {
+        $this->students->add($student);
+    }
+
+    public function addTeacher(Teacher $teacher) {
+        $this->teachers->add($teacher);
+    }
+
+    public function displayInformation(): string {
+        $output = "{$this->identifier} {$this->startTime}-{$this->endTime}\n";
+        $output .= "Teachers: " . implode(', ', $this->teachers->getNames()) . "\n";
+        $output .= $this->students->displayInformation();
+        return $output;
+    }
+}
+
+// Student and Teacher classes (implemented similarly with private fields, constructors, and accessor methods)
+
+// StudentCollection and TeacherCollection classes:
+namespace USJR\School\Entities;
+
+class StudentCollection {
+    private array $students;
+
+    public function __construct(array $students = []) {
+        $this->students = $students;
+    }
+
+    public function add(Student $student) {
+        $this->students[] = $student;
+    }
+
+    public function getNames(): array {
+        return array_map(fn (Student $student) => $student->getName(), $this->students);
+    }
+
+    public function displayInformation(): string {
+        $output = "";
+        foreach ($this->students as $student) {
+            $output .= "{$student->getName()}\n";
+        }
+        return $output;
+    }
+}
+
+// Similar implementation for TeacherCollection
+
+// University testing class:
+namespace USJR;
+
+class University {
+    public static function main(): void {
+        // Create classes and instances
+        $school = new School("University of San - Recoletos");
+
+        $class1A = new ClassSchedule("ITELEC1A", "10:00am", "11:30am");
+        $class1A->addTeacher(new Teacher("Dr. Gregg Gabison"));
+        $class1A->addTeacher(new Teacher("Ms. Marisa Mahilum"));
+
+        $class1B = new ClassSchedule("ITELEC1A", "8:30am", "10:00am");
+        $class1B->addTeacher(new Teacher("Mr. Roderick Bandalan"));
+
+        // ... (implement students for each class)
+
+        $school->addClass($class1A);
+        <span class="math-inline">school\-\>addClass\(</span>

@@ -1,0 +1,21 @@
+.appointment-container {
+  margin-top: 20px;
+}
+
+.appointment-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.appointment-buttons {
+  display: flex;
+}
+
+.accept-button,
+.decline-button {
+  margin-right: 10px;
+  cursor: pointer;
+}

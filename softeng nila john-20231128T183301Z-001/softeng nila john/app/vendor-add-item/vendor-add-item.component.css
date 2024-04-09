@@ -1,0 +1,79 @@
+#items-outside {
+    position: absolute;
+    /* border: solid; */
+    width: 800px;
+    height: 650px;
+    top: 20%;
+    left: 40%; /* Adjust this to center horizontally */
+    right: 25%; /* Adjust this to center horizontally */
+    text-align: center;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background-color: #E0F4FF;
+    border-radius: 10px;
+  }
+
+  #item-inside{
+    padding: 10px;
+    
+  }
+  
+  #item-inputs {
+    /* border: solid; */
+    width: 77   0px;
+    height: 600;
+   background-color: white;
+   border-radius: 10px;
+   padding: 5px;
+  }
+
+  /* input{
+    padding: 10px;
+    margin: 10px;
+    width: 70%;
+  } */
+
+
+  input, textarea {
+    padding: 10px;
+    margin: 10px;
+    width: 70%;
+    resize: none;
+  }
+  
+  textarea {
+    height: 120px; /* You can adjust the height as needed for your design */
+  }
+ 
+
+  
+input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 50px;
+    background: #4a53d3;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.4);
+
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+    background: #aea1dd;
+    color: #000;
+}
+
+
+a:hover {
+    color: #927fda;
+}
+
+#edit-product{
+    width: 50%;
+    height: fit-content;
+    top: 10%;
+    right: 25%;
+    position: absolute;
+}

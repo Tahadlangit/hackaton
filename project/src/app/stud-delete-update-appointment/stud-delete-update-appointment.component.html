@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <header>
+        <div class="logo">
+          <img class="logo-title" src="https://img.icons8.com/ios-filled/50/FAB005/vertical-line.png" alt="vertical-line"/>
+          <p class="logo-name">ClinicConnect</p>
+        </div>  
+        <div class="menu-bar">
+            <a href="C:\Users\janroe\Documents\ClinicConnect\Homepage\homepage.html">Home</a>
+            <a href="C:\Users\janroe\Documents\ClinicConnect\Homepage\homepage.html">About</a>
+            <div class="dropdown">
+                <a class="dropbtn" (click)="toggleDropdownServices()">Services</a>
+                <img class="dropdown-arrow" src="https://img.icons8.com/ios-filled/50/FFFFFF/expand-arrow--v1.png" alt="dropdown-icon"/>
+                    <div class="dropdown-content" id="myDropdown">
+                        <a href="#service1">Service 1</a>
+                        <a href="#service2">Service 2</a>
+                        <a href="#service3">Service 3</a>
+                    </div>
+                </div>
+            <a href="C:\Users\janroe\Documents\ClinicConnect\Homepage\homepage.html">Contact</a>
+        </div>
+            <div class="right">
+              <button class="logout-btn">Logout</button>
+            </div>
+    </header>
+        <hr>
+        <div class="notification-container">
+            <div class="notification-bell" (click)="toggleDropdownNotification()">
+              <img width="24" height="24" src="https://img.icons8.com/android/24/appointment-reminders.png" alt="appointment-reminders"/>
+                <span class="badge">3</span>
+            </div>
+            <div class="notification-dropdown" id="notificationDropdown">
+                <ul>
+                    <li>Notification 1</li>
+                    <li>Notification 2</li>
+                    <li>Notification 3</li>
+                </ul>
+            </div>
+        </div>
+        <section class="sidebar">
+            <div class="sidenav">
+                <img width="100" height="100" src="https://img.icons8.com/ios/100/user-male-circle--v1.png" alt="user-male-circle--v1"/>
+                <div class="profile-name">Student</div>
+                    <a href="#dental" class="a-sidenav"><button class="side-nav-btn" (click)="showForm('update')">Update Appointment</button></a>
+                    <a href="#medical" class="a-sidenav"><button class="side-nav-btn" (click)="showForm('delete')">Cancel Appointment</button></a>
+              </div>
+              <img width="20" height="20" src="https://img.icons8.com/external-prettycons-solid-prettycons/60/external-settings-essentials-prettycons-solid-prettycons-3.png" alt="external-settings-essentials-prettycons-solid-prettycons-3" class="settings-icon"><a href="#account-settings" class="account-settings">Account Settings</a>
+        </section>
+        <section id="content">
+                    <div id="update-form" class="appointment-form">
+                      <h2>Update Student Appointment</h2>
+                        <div *ngIf="!isUpdating; else updateForm">
+                          <div *ngFor="let student of students" class="container-students">
+                            <div class="students">
+                              <div class="student-icon">
+                                <img width="64" height="64" src="https://img.icons8.com/pastel-glyph/64/appointment-time.png" alt="appointment-time"/>
+                              </div>
+                              <div class="appointment-info">
+                                <h3>{{ student.studid }}</h3>
+                                <h3>{{ student.appointment }}</h3>
+                                <p>Appointment Date: {{ student.appointmentDate }}</p>
+                                <p>Appointment Time: {{ student.appointmentTime }}</p>
+                              </div>
+                              <div class="appointment-button">
+                                <button class="custom-btn-update" (click)="updateStudent(student)"><img width="50" height="50" src="https://img.icons8.com/ios-filled/50/edit-calendar.png" alt="edit-calendar"/></button>
+                              </div>
+                            </div>   
+                          </div>
+                        </div>
+                        
+                        <ng-template #updateForm>
+                          <div>
+                            <h3>Update Student Appointment</h3>
+                            <table>
+                              <tr>
+                                <td>
+                                  <label for="updatedAppointment">Appointment:</label>
+                                </td>
+                                <td>
+                                  <input style="width: 100%;" id="updatedAppointment" [(ngModel)]="selectedStudent.appointment" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <label for="updatedDate">Appointment Date:</label>
+                                </td>
+                                <td>
+                                  <input style="width: 100%;" type="date" id="updatedDate" [(ngModel)]="selectedStudent.appointmentDate" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <label for="updatedTime">Appointment Time:</label>
+                                </td>
+                                <td>
+                                  <input style="width: 100%;" type="time" id="updatedTime" [(ngModel)]="selectedStudent.appointmentTime" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td colspan="2" style="text-align: center;">
+                                  <button class="updatebtn" (click)="saveUpdatedStudent(selectedStudent)">Save</button>
+                                  <button style="margin-left: 10px;" class="deletebtn" (click)="cancelUpdate()">Cancel</button>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                        </ng-template>
+                    </div>
+                    
+                    <div id="delete-form" class="appointment-form">
+                      <h2>Cancel Student Appointment</h2>
+                          <div *ngFor="let student of students" class="container-students">
+                            <div class="students">
+                              <div class="student-icon">
+                                <img width="64" height="64" src="https://img.icons8.com/pastel-glyph/64/appointment-time.png" alt="appointment-time"/>
+                              </div>
+                              <div class="appointment-info">
+                                <h3>{{ student.studid }}</h3>
+                                <h3>{{ student.appointment }}</h3>
+                                <p>Appointment Date: {{ student.appointmentDate }}</p>
+                                <p>Appointment Time: {{ student.appointmentTime }}</p>
+                              </div>
+                              <div class="appointment-button">
+                                <button class="custom-btn-cancel" (click)="deleteStudent(student.id)"><img width="50" height="50" src="https://img.icons8.com/ios/50/close-window--v1.png" alt="close-window--v1"/></button>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+        </section>
+</body>
+</html>

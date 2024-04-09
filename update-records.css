@@ -1,0 +1,69 @@
+/* Side Navigation Bar Styles */
+.sidenav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* Ensure the side navigation bar is displayed behind the main content */
+    width: 250px;
+    height: 100%;
+    background-color: #f8f9fa;
+    overflow-x: hidden;
+    /* Prevent horizontal overflow */
+}
+
+.sidenav-logo {
+    width: 150px;
+    margin: 20px auto;
+}
+
+.sidenav a {
+    display: block;
+    padding: 16px;
+    text-decoration: none;
+    color: #212529;
+    font-size: 16px;
+}
+
+.sidenav a:hover {
+    background-color: #f0f3f6;
+}
+
+/* Header Styles */
+header {
+    background-color: #2D582E;
+    /* Updated theme color */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Adjust the header position to accommodate the side navigation bar */
+    position: relative;
+    left: 250px;
+    /* Add margin to align with the width of the side navigation bar */
+}
+
+/* ClinicConnect heading style */
+h1 {
+    margin: 0;
+}
+
+/* Navigation styles */
+.menu-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-bar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 0 10px;
+}
+
+/* Center the navigation links */
+.menu-bar {
+    text-align:
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClinicConnect</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img class="logo-title" src="https://img.icons8.com/ios-filled/50/FAB005/vertical-line.png" alt="vertical-line"/>
+            <p class="logo-name">ClinicConnect</p>
+        </div>
+        <div class="menu-bar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <div class="dropdown">
+                <a class="dropbtn">Services</a>
+                <img class="dropdown-arrow" src="https://img.icons8.com/ios-filled/50/FFFFFF/expand-arrow--v1.png" alt="dropdown-icon"/>
+                    <div class="dropdown-content" id="myDropdown">
+                    </div>
+                </div>
+            <a href="#contact">Contact</a>
+        </div>
+            <div class="right">
+                <button routerLink="/login-user" class="logout-btn">Logout</button>
+            </div>
+            
+    </header>
+    <hr>
+        <div class="notification-container">
+            <div class="notification-bell">
+                <img width="24" height="24" src="https://img.icons8.com/android/24/appointment-reminders.png" alt="appointment-reminders"/>
+                <span class="badge">3</span>
+            </div>
+            <div class="notification-dropdown" id="notificationDropdown">
+                <ul>
+                    <li>Notification 1</li>
+                    <li>Notification 2</li>
+                    <li>Notification 3</li>
+                </ul>
+            </div>
+        </div>
+        <section class="sidebar">
+            <div class="sidenav">
+                <img width="100" height="100" src="https://img.icons8.com/ios/100/user-male-circle--v1.png" alt="user-male-circle--v1"/>
+                <div class="profile-name">Admin 1</div>
+                <a  class="a-sidenav"><button routerLink="/create-staff" class="side-nav-btn" >Create Staff Account</button></a>
+                <a  class="a-sidenav"><button routerLink="/view-list-admin" class="side-nav-btn" >View Appointment Lists</button></a>
+                <a  class="a-sidenav"><button routerLink="/update-stud-rec" class="side-nav-btn">Update Student Record</button></a>
+              </div>
+        </section>
+
+        <div class="forms">
+            <!-- Medical Appointment Form -->
+            <div id="medical-form" class="appointment-form">
+                <form>
+                  <table>
+                      <tr>
+                          <th colspan="2" style="text-align: center;"><h2>Update Student Record</h2></th>
+                      </tr>
+                      <tr>
+                          <td><label class="form-label" for="medical-studid">Student ID Number</label></td>
+                          <td><input class="form-input" type="text" id="medical-studid" name="medical-studid" required></td>
+                      </tr>
+                      <tr>
+                          <td><label class="form-label" for="medical-firstname">Reason for Visit</label></td>
+                          <td><input class="form-input" type="text" id="medical-firstname" name="medical-firstname" required></td>
+                      </tr>
+                      <tr>
+                          <td><label class="form-label" for="medical-date">Appointment Date</label></td>
+                          <td><input class="form-input" type="date" id="medical-date" name="medical-date" required></td>
+                      </tr>
+                      <tr>
+                        <td><label class="form-label" for="medical-date">Appointment Time Frame</label></td>
+                        <td><input class="form-input" type="text" id="medical-date" name="medical-date" required></td>
+                    </tr>
+                      <tr>
+                          <td><label class="form-label" for="medical-lastname">Updated Student Records</label></td>
+                          <td><input class="form-input" type="text" id="medical-lastname" name="medical-lastname" required></td>
+                      </tr>
+                      <tr>
+                          <td colspan="2" style="text-align: center;"><button class="submit" type="submit">Update Student Record</button></td>
+                      </tr>
+                  </table>
+                </form>
+              </div>
+        </div>
+</body>
+</html>
+
+

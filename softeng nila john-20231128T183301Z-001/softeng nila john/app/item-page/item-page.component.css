@@ -1,0 +1,242 @@
+#container {
+    display: flex;
+    background-color: #F1F2F6;
+    box-sizing: border-box;
+    /* border-style: solid; */
+    width: 100%;
+    height: 100vh;
+
+
+
+    /* width: 100%;
+    height: 100vh; */
+
+
+
+    justify-content: center;
+    /* Horizontally center the image */
+    align-items: center;
+}
+
+#item-page-container {
+
+    /* border-style: solid; */
+    border-radius: 10px 10px 0 0;
+    margin-top: 160px;
+    height: calc(100vh - 160px);
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.05), 5px 0 10px rgba(0, 0, 0, 0.05), 0 5px 10px rgba(0, 0, 0, 0.05);
+    /* padding-right: 40px;
+    padding-left: 40px; */
+    width: 60%;
+    background-color: white;
+
+    box-sizing: border-box;
+
+    /* added */
+
+    /* display: flex;
+    flex-wrap: wrap; */
+    /* border-style: solid; */
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#item-page-container::-webkit-scrollbar {
+    width: 0.1em;
+}
+
+#item-page-container::-webkit-scrollbar-thumb {
+    width: 0.1em;
+}
+
+#map-snippet-container {
+
+    /* padding-top: px; */
+    background-color: black;
+
+
+    /* border-style: solid; */
+
+    /* width: 100%;
+    height: 400px;
+    background-color: #ddd;
+    /*  */
+
+    /* flex: 0 0 auto; */
+    width: 100%;
+    height: 400px;
+    margin-right: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+
+    /* border-bottom: 1px solid grey; */
+
+}
+
+#map-snippet-container p {
+    text-align: center;
+    color: white;
+}
+
+#map {
+
+    width: 110%;
+    height: auto;
+    object-fit: cover;
+
+
+    /* position: absolute; */
+    /* Set the position to absolute for precise placement */
+    /* top: 50%;
+
+    left: 50%; */
+
+    /* transform: translate(-50%, -50%); */
+
+
+}
+
+
+#container-2 {
+    margin-top: 20px;
+
+    box-sizing: border-box;
+    width: 100%;
+    height: 700px;
+}
+
+#left-container {
+    /* flex: 0 0 auto; */
+    background-color: #E0F4FF;
+    float: left;
+    width: 30%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: center;
+
+}
+
+
+/* #title {
+
+    margin-bottom: 100px;
+} */
+
+#store-desciption-container {
+    box-sizing: border-box;
+    padding-left: 5px;
+    padding-right: 5px;
+
+}
+
+#description {
+    font-size: 15px;
+    text-align: justify;
+
+
+}
+
+
+#store-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+#right-container {
+    background-color: #E0F4FF;
+    /* border-style: solid; */
+    box-sizing: border-box;
+    margin-left: 32%;
+    height: 100%;
+
+
+
+
+}
+
+#right-container-image-container {
+
+    width: 100%;
+    height: 65%;
+    margin-right: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+
+}
+
+#right-img {
+
+    width: 110%;
+    height: auto;
+    object-fit: cover;
+
+
+
+    position: absolute;
+    /* Set the position to absolute for precise placement */
+    top: 50%;
+    /* Move the image down by 50% of the container's height */
+    left: 50%;
+    /* Move the image right by 50% of the container's width */
+    transform: translate(-50%, -50%);
+
+
+}
+
+
+
+
+
+#star {
+    display: inline;
+    margin-top: 0%;
+    font-size: 40px;
+}
+
+#right-container-description {
+
+    padding-left: 5px;
+    padding-right: 5px;
+
+    /* border-style: solid; */
+    width: 100%;
+
+    height: 35%;
+    box-sizing: border-box;
+}
+
+#right-title {
+    margin-top: -3px;
+    margin-bottom: 8px;
+    margin-left: 15px;
+    font-size: 25px;
+}
+
+#right-description {
+    text-align: justify;
+    margin-left: 15px;
+
+    font-size: 15px;
+}
+
+#forum-button {
+    border-style: none;
+    width: 200px;
+    color: white;
+    height: 30px;
+    background-color: black;
+    border-radius: 5px;
+    margin-left: 15px;
+    transition: background-color 0.3s;
+    /* Adding a smooth transition for a gradual color change */
+
+}
+
+#forum-button:hover {
+    background-color: darkgray;
+    color: black;
+    cursor: pointer;
+}

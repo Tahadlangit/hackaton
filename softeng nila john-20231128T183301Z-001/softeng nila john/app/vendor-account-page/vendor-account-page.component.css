@@ -1,0 +1,8 @@
+#main-container{
+    position: absolute;
+    width: 83%;
+    height: 50%;
+    bottom: 0px;
+    right: 0px;
+    border: solid;
+}

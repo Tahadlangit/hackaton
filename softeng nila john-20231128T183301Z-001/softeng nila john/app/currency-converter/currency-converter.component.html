@@ -1,0 +1,82 @@
+
+<app-header-user></app-header-user>
+<app-side-bar></app-side-bar>
+
+
+
+
+
+
+  <div class="container">
+      <div class="main">
+        <h1 class="heading text-center display-2">
+            Exchange Rate
+          </h1>
+          <hr>
+          <div class="form-group">
+              <label for="oamount">
+                  Amount to Convert :
+              </label>
+              <input type="text" class="form-control searchBox" placeholder="0.00" id="oamount">
+          </div>
+          <div class="row">
+              <div class="col-sm-6">
+                  <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                          <span class="input-group-text">From</span>
+                      </div>
+                      <select class="form-control from" id="sel1">
+                          <option value="">Select One …</option>
+                          <option value="USD">USD</option>
+                          <option value="AED">AED</option>
+                          <option value="ARS">ARS</option>
+                          <option value="AUD">AUD</option>
+                          <option value="BGN">BGN</option>
+                          <option value="BRL">BRL</option>
+                         
+                      </select>
+                  </div>
+              </div>
+
+              <div class="col-sm-6">
+                  <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                          <span class="input-group-text">To</span>
+                      </div>
+                      <select class="form-control to" id="sel2">
+                          <option value="">Select One …</option>
+                          <option value="USD">USD</option>
+                          <option value="AED">AED</option>
+                          <option value="ARS">ARS</option>
+                          <option value="AUD">AUD</option>
+                          <option value="BGN">BGN</option>
+                          <option value="BRL">BRL</option>    
+                      </select>
+                  </div>
+              </div>
+          </div>
+
+          <div class="text-center">
+
+            
+              <button class="btn btn-primary convert m-2" type="submit">
+                  Convert
+              </button>
+            
+              <button class="btn btn-primary m-2" onclick="clearVal()">
+                  Reset
+              </button>
+          </div>
+
+      </div>
+      <h2>RESULT:300</h2>
+
+      <div id="finalAmount" class="text-center">
+
+         
+          <h2>Converted Amount :
+              <span class="finalValue" style="color:green;">
+              </span>
+          </h2>
+      </div>
+  </div>

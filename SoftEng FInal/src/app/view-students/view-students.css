@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('assets/background.png'); /* Replace with your background image */
+    background-size: cover;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+
+  }
+  .section-title {
+    text-align: center; 
+    padding-top: 2rem;
+  }
+  .profile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 5rem;
+  }
+  
+  .profile {
+    text-align: center;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+  }
+  
+  .profile img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  .profile figcaption {
+    margin-top: 0.5rem;
+    font-weight: bold;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+  .section-title {
+    font-weight: bold; /* Make the text bold */
+    text-align: center; /* Center align the text */
+  }
+  .save-btn {
+    position: absolute;
+    bottom: -16rem;
+    right: 3rem; 
+    background-color: #41C9E2; 
+    color: #fff; 
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; 
+  }
+
+  

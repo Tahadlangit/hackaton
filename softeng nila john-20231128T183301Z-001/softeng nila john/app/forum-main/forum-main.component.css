@@ -1,0 +1,196 @@
+#main-container {
+
+    width: 100%;
+    height: 100vh;
+
+    background-color: aqua;
+
+    display: flex;
+    background-color: #F1F2F6;
+    box-sizing: border-box;
+    /* border-style: solid; */
+    width: 100%;
+    height: 100vh;
+
+
+
+    /* width: 100%;
+    height: 100vh; */
+
+
+
+    justify-content: center;
+    /* Horizontally center the image */
+    align-items: center;
+
+
+}
+
+#container {
+    padding-top: 80px;
+
+    height: 100vh;
+    width: 60%;
+    /* background-color: white; */
+    box-sizing: border-box;
+    /* display: flex;
+    flex-wrap: wrap; */
+    overflow-y: auto;
+}
+
+
+
+#title {
+    text-align: center;
+    color: white;
+
+}
+
+#title-container {
+
+
+
+    box-sizing: border-box;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    width: 90%;
+    height: 60px;
+    border-style: solid;
+
+    margin: 40px auto 0px;
+
+
+    background-color: black;
+
+
+}
+
+
+#container::-webkit-scrollbar {
+    width: 0.1em;
+}
+
+#container::-webkit-scrollbar-thumb {
+    width: 0.1em;
+}
+
+.main-item {
+    width: 90%;
+    height: auto;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 50px auto 20px;
+    margin-top: 15px;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+
+    /* Smooth transition for color change */
+}
+
+
+.main-item span {
+    font-size: 20px;
+}
+
+
+
+.side-item-container {
+    width: 100%;
+    height: auto;
+    /* border-style: solid; */
+    margin-top: 10px;
+    display: flex;
+
+}
+
+
+.img-container {
+    height: 400px;
+    width: 400px;
+    overflow: hidden;
+    position: relative;
+    margin-right: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+
+
+
+}
+
+.img {
+
+    width: 110%;
+
+    /* object-fit: cover; */
+    position: absolute;
+    /* Set the position to absolute for precise placement */
+    top: 50%;
+    /* Move the image down by 50% of the container's height */
+    left: 50%;
+    /* Move the image right by 50% of the container's width */
+    transform: translate(-50%, -50%);
+}
+
+#forum-preview {
+    /* border-style: solid; */
+    text-align: justify;
+    width: 60%;
+    border-radius: 10px;
+    background-color: lightgray;
+    padding-left: 10px;
+
+    padding-right: 10px;
+
+    /* margin-left: 50px; */
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+
+
+}
+
+
+hr {
+    border-top: 1px solid black;
+    /* Border style */
+    /* margin: 20px 0; */
+
+    width: 90%;
+    /* Margin above and below the divider */
+    /* Other styles you might want to apply */
+
+
+    /* 1 pixel solid border on the top side */
+
+
+}
+
+.main-item:hover {
+    background-color: black;
+
+    /* Change text color for better readability */
+    cursor: pointer;
+}
+
+.main-item:hover span {
+
+
+    color: white;
+    /* Change text color for better readability */
+
+}
+
+#view-comments {
+    color: grey;
+
+    position: absolute;
+    /* position: absolute; */
+    bottom: 0;
+    right: 0;
+    margin-right: 10px;
+    font-size: 15px;
+}
+
+#view-comments:hover {
+    color: white;
+}

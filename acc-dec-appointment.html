@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Records - ClinicConnect</title>
+  <link rel="stylesheet" href="view-record.css">
+  <style>
+    .appointment-container {
+      margin-top: 20px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .appointment-item {
+      border: 1px solid #ccc;
+      border-radius: 35px;
+      padding: 20px;
+      margin-bottom: 20px; 
+      display: flex;
+      flex-direction: left; 
+    }
+
+    .appointment-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px; 
+    }
+    
+    .accept-button {
+      border-radius: 50px;
+      width: 60px; 
+      height: 60px; 
+      cursor: pointer;
+      margin: 0 35px; 
+    }
+  
+    
+    .decline-button {
+      border-radius: 50px;
+      width: 60px; 
+      height: 60px;
+      cursor: pointer;
+      margin-left: 100px;
+      flex-direction: right; 
+    }
+  
+    .appointment-details {
+      text-align: left;
+      margin-top: 10px; 
+    }
+  </style>
+</head>
+
+<body>
+  <div class="sidenav">
+    <p>User</p>
+  </div>
+  <header>
+    <h1>ClinicConnect</h1>
+    <nav class="menu-bar">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#service">Service</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="right">
+      <button class="signup-btn">Sign Out</button>
+    </div>
+  </header>
+  <section>
+
+    </div>
+    <div class="appointment-container">
+      <h2>Appointment List</h2>
+      <div class="appointment-item">
+        <div class="appointment-buttons">
+          <button class="accept-button" onclick="acceptAppointment()">Accept</button></div>
+        <div class="appointment-details">
+          <p>Appointment No: 1</p>
+          <p>Student Name: John Doe</p>
+          <p>Date: 2023-02-15</p>
+          <p>Time: 10:00 AM</p>
+          <p>Purpose: Checkup</p>
+        </div>
+      <div class="appointment-buttons">
+          <button class="decline-button" onclick="declineAppointment()">Decline</button>
+        </div>
+      </div>
+      <div class="appointment-item">
+        <div class="appointment-buttons">
+          <button class="accept-button" onclick="acceptAppointment()">Accept</button></div>
+        <div class="appointment-details">
+          <p>Appointment No: 2</p>
+          <p>Student Name: Jane Smith</p>
+          <p>Date: 2023-02-22</p>
+          <p>Time: 11:00 AM</p>
+          <p>Purpose: Counseling</p>
+        </div>
+        <div class="appointment-buttons">
+          <button class="decline-button" onclick="declineAppointment()">Decline</button>
+        </div>
+      </div>
+      <div class="appointment-item">
+        <div class="appointment-buttons">
+          <button class="accept-button" onclick="acceptAppointment()">Accept</button></div>
+        <div class="appointment-details" >
+          <p>Appointment No: 3</p>
+          <p>Student Name: Donald Duck</p>
+          <p>Date: 2023-02-23</p>
+          <p>Time: 3:00 PM</p>
+          <p>Purpose: Teeth Cleaning</p>
+        </div>
+        <div class="appointment-buttons">
+          <button class="decline-button" onclick="declineAppointment()">Decline</button>
+        </div>
+      </div>
+  </section>
+
+  <script>
+    function acceptAppointment() {
+      alert('Appointment Accepted!');
+      
+    }
+
+    function declineAppointment() {
+      alert('Appointment Declined!');
+      
+    }
+  </script>
+</body>
+
+</html>

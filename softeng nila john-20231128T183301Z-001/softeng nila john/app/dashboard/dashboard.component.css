@@ -1,0 +1,163 @@
+#dashoard-container {
+
+
+
+    display: flex;
+    background-color: #F1F2F6;
+    box-sizing: border-box;
+    /* border-style: solid; */
+    width: 100%;
+    height: 100vh;
+
+
+
+    /* width: 100%;
+    height: 100vh; */
+
+
+
+    justify-content: center;
+    /* Horizontally center the image */
+    align-items: center;
+}
+
+#main-dashboard {
+
+
+    border-radius: 10px 10px 0 0;
+    margin-top: 160px;
+    height: calc(100vh - 160px);
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.05), 5px 0 10px rgba(0, 0, 0, 0.05), 0 5px 10px rgba(0, 0, 0, 0.05);
+    padding-right: 40px;
+    padding-left: 40px;
+    width: 60%;
+    background-color: white;
+
+    box-sizing: border-box;
+
+    /* added */
+
+    display: flex;
+    flex-wrap: wrap;
+    /* border-style: solid; */
+    overflow-y: auto;
+}
+
+
+
+#main-dashboard::-webkit-scrollbar {
+    width: 0.1em;
+}
+
+#main-dashboard::-webkit-scrollbar-thumb {
+    width: 0.1em;
+}
+
+/* .item-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 50px;
+    border-style: solid;
+
+} */
+
+.item {
+    /* width: calc(50% - 100px);
+    
+    background-color: #ddd;
+    padding: 30px;
+
+    margin: 0 auto 20px;
+    
+    box-sizing: border-box; */
+
+
+    width: calc(50% - 50px);
+    /* Adjusted width to make the center gap smaller */
+    height: auto;
+    padding: 15px;
+    padding-bottom: 40px;
+    background-color: #ddd;
+
+    margin: 50px auto;
+    /* Adjusted margins for top, center, and bottom */
+    box-sizing: border-box;
+
+}
+
+.img {
+
+    width: 110%;
+    height: 110%;
+    object-fit: cover;
+    position: absolute;
+    /* Set the position to absolute for precise placement */
+    top: 50%;
+    /* Move the image down by 50% of the container's height */
+    left: 50%;
+    /* Move the image right by 50% of the container's width */
+    transform: translate(-50%, -50%);
+}
+
+.cropped-image-container {
+
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 10px;
+
+}
+
+
+
+.desc-placeholder {
+    color: lightslategray;
+    margin-bottom: 10px;
+}
+
+.item-price {
+    font-weight: bolder;
+    margin-bottom: 30px;
+
+
+}
+
+.item-desc {
+
+    margin-bottom: 10px;
+    text-align: justify;
+
+}
+
+.button {
+    width: 100%;
+    background-color: #141718;
+    height: 60px;
+    color: #ddd;
+    border-style: none;
+    border-radius: 10px;
+    font-size: 1.5em;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-image: linear-gradient(to right, #ff7e5f, #feb47b);
+    /* Replace with your gradient colors */
+    color: #fff;
+    /* Change text color on hover, adjust as needed */
+    cursor: pointer;
+    /* Change the cursor on hover */
+
+}
+
+
+
+
+
+
+
+span {
+    display: inline-block;
+
+}

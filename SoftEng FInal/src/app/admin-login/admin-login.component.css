@@ -1,0 +1,227 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #EDE9E8;
+    color: #333;
+    height: 97.5vh;
+    max-width: 100%;
+    background-color: #F8FFF8;
+  }
+  .newspace{
+    background-color: #F2B933;
+    height: 20px;
+  }
+  .bods{
+    padding-top: 80px;
+    padding-left: 50px;
+  }
+  
+  /* LOGO */
+  .logo {
+  display: flex;
+  align-items: center;
+  }
+  
+  .logo-name {
+  font-size: 2.7em;
+  }
+  
+  .logo-title {
+  margin-left: 10px;
+  margin-bottom: 2px;
+  padding: 0;
+  height: 40px;
+  width: 50px;
+  }
+  
+  hr {
+    margin-top: 0px;
+    padding-top: 0px;
+    left: 0;
+    border: 10px solid #2D582E;
+  }
+  
+  section {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* MENU BAR AND HEADER */
+  
+  .menu-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .menu-bar a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding-left: 50px;
+  }
+  
+  .menu-bar a:hover {
+    color: #FFC300;
+  }
+  
+  header {
+    background-color: rgba(13,62,32,0.98);
+    height: 60px;
+    color: #fff;
+    padding: 50px;
+    margin-bottom: 0px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* DROP DOWN SERVICES */
+  
+  .dropdown {
+    position: relative;
+    display: flex;
+    align-items: left;
+  }
+  
+  .dropbtn {
+    color: white;
+    padding-right: 5px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+  
+  .dropdown-arrow {
+    margin-right: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    top: 100%; 
+    left: 35px;
+    min-width: 120px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #2D582E;
+  }
+  /* LOGIN BUTTONS AND SIGNUP */
+  
+  .logout-btn {
+    background-color: rgba(15, 90, 44, 0.98);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    margin: 8px 20px 8px 8px;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  
+  .logout-btn:hover {
+    background-color:  blue;
+  }
+  
+  /* login.component.css */
+  .login-container {
+    max-width: 350px;
+      margin: auto;
+      margin-top: 80px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    
+    input {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+    }
+    
+    button {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-bottom: 15px;
+    }
+    /* SIDE NAVIGATION */
+
+  .sidenav {
+    height: 200px;
+    width: 200px;
+    position: fixed;
+    margin-top: 75px;
+    top: 97.9px;
+    left: 20px;
+    background-color: #F2B933;
+    padding-top: 30px;
+  }
+
+  .profile-name {
+    color: black;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+    margin: 10px;
+  }
+
+  .side-nav-btn {
+    display: absolute;
+    width: 80px;
+    padding: 8px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    border: 1px solid;
+    background: #f9f9f9;
+    cursor: pointer;
+    transition: color 0.3s;
+    color: black;
+  }
+
+  .a-sidenav {
+    text-decoration: none;
+    color: black;
+    background-color: #f9f9f9;
+  }
+
+   .a-sidenav .side-nav-btn:hover {
+    color: #F2B933;
+    background-color: rgba(13,62,32,0.98);
+  }
+    
